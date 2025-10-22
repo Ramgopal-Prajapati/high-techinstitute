@@ -86,38 +86,14 @@ nav ul {
     gap: var(--spacing-lg);
 }
 
-/* 
-nav a {
-    text-decoration: none;
-    color: var(--text-dark);
-    font-weight: 500;
-    transition: color 0.3s;
-    position: relative;
-}
 
-nav a:hover {
-    background: linear-gradient(90deg, #00c6ff, #0072ff,green);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  transform: scale(1.05);
-  border: 2px solid green;
 
-}
 
-nav a.active {
-    color: var(--primary-indigo);
-    font-weight: 600;
-}
 
-nav a.active::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, var(--primary-indigo), var(--primary-purple));
-}
- */
+
+
+
+
 
 
 
@@ -226,6 +202,45 @@ nav a:hover::after {
 
 
 
+
+
+
+
+
+
+
+
+
+
+/* 
+
+nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+nav a:hover {
+    color: var(--primary-indigo);
+}
+
+nav a.active {
+    color: var(--primary-indigo);
+    font-weight: 600;
+}
+
+nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-indigo), var(--primary-purple));
+} */
+
 .header-cta {
     background: linear-gradient(90deg, var(--primary-indigo), var(--primary-purple), var(--primary-green));
     color: white;
@@ -323,6 +338,110 @@ nav a:hover::after {
     gap: var(--spacing-md);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  width: 100%;
+  z-index: 1;
+}
+
+/* --- Primary Button --- */
+.btn-primary {
+  background: linear-gradient(90deg, #6366f1, #8b5cf6, #10b981);
+  background-size: 300%;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+  transition: background-position 0.5s ease, transform 0.2s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+  background-position: right center;
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 6px 25px rgba(99, 102, 241, 0.6);
+}
+
+/* Light shine/glow animation */
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0)
+  );
+  transform: skewX(-25deg);
+  transition: 0.6s;
+  z-index: 0;
+}
+
+.btn-primary:hover::before {
+  left: 130%;
+}
+
+/* Click effect */
+.btn-primary:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 10px rgba(99, 102, 241, 0.4);
+}
+
+/* --- Secondary Button --- */
+.btn-secondary {
+ background: linear-gradient(90deg, #6366f1, #8b5cf6, #10b981);
+  background-size: 300%;
+  color: rgb(255, 248, 248);
+  border: none;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+  transition: background-position 0.5s ease, transform 0.2s, box-shadow 0.3s;
+}
+
+.btn-secondary:hover {
+ background-position: right center;
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 6px 25px rgba(99, 102, 241, 0.6);
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
 .btn {
     padding: 12px;
     border-radius: 8px;
@@ -360,7 +479,7 @@ nav a:hover::after {
 
 .btn-secondary:hover {
     background: rgba(79, 70, 229, 0.05);
-}
+} */
 
 /* Hero1 Section */
 .hero1 {
